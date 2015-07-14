@@ -1,29 +1,27 @@
+//to convert C to F
+
+var temp = parseFloat(prompt("Enter a temperature to convert from Celsius to Fahrenheit."));
+var conversion = (9.0 / 5.0) * (temp + 32);
+alert("Your temperature is" + " " + conversion);
 
 
-function celsius(input) { //convert to Celsius//
-
-    var conversion;
-    conversion = (5.0 / 9.0) * (input - 32);
-
+//to convert either way
+function celsius(input) {
+    var conversion = (5.0 / 9.0) * (input - 32);
     return conversion;
 }
 
-function fahrenheit(input) { //convert to Fahrenheit//
-
-    var conversion;
-    conversion = (9.0 / 5.0) * (input + 32);
-
+function fahrenheit(input) {
+    var conversion = (9.0 / 5.0) * (input + 32);
     return conversion;
 }
 
-var temp; //temperature that will be converted//
-temp = parseFloat(prompt("Enter a temperature to convert."));
-var converter; //type of conversion needed//
-converter = prompt("Enter 'c' to convert to Celsius or 'f' for Fahrenheit.");
-converter = converter.toLowerCase();
+var temp = parseFloat(prompt("Enter a temperature to convert."));
+var converter = prompt("Enter 'C' to convert to Celsius or 'F' for Fahrenheit.");
+converter = converter.toUpperCase();
 
-if (converter == 'c') {
+if (converter === 'C') {
     alert("Your temperature is" + " " + celsius(temp));
-} else if (converter == 'f') {
+} else if (converter === 'F') {
     alert("Your temperature is" + " " + fahrenheit(temp));
 }
